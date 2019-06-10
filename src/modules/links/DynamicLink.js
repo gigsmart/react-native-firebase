@@ -74,7 +74,7 @@ export default class DynamicLink {
   build(): NativeDynamicLink {
     if (!this._link) {
       throw new Error('DynamicLink: Missing required `link` property');
-    } else if (!this._dynamicLinkDomain) {
+    } else if (!this._dynamicLinkDomain && !this._domainUriPrefix) {
       throw new Error(
         'DynamicLink: Missing required `dynamicLinkDomain` property'
       );
